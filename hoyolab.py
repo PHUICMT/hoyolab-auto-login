@@ -400,6 +400,7 @@ async def send_discord_embed(login_results, url, discord_id):
 
 async def main():
     cookie = os.getenv("COOKIE", None)
+    logging.info("Cookie: %s" % cookie)
     if not cookie:
         logging.critical("Variable 'COOKIE' not found, please ensure that variable exist")
         exit(0)
