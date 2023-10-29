@@ -430,9 +430,9 @@ async def main():
 
             # Verify if cookie is valid and account exist
             account_info, retcode, msg = await get_account_info(header=header)
-            logging.debug(f"Account info: {account_info}")
-            logging.debug(f"Retcode: {retcode}")
-            logging.debug(f"Message: {msg}")
+            logging.info(f"Account info: {account_info}")
+            logging.info(f"Retcode: {retcode}")
+            logging.info(f"Message: {msg}")
             if not account_info or retcode != 0:
                 logging.error(f"Cookie {index + 1}/{len(cookies)} invalid, verify if 'cookie_token' exist")
                 logging.error(f"Reason: {msg}")
